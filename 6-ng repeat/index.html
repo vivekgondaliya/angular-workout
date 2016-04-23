@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+	<title>ng-repeat</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="my-script.js"></script>
+</head>
+<body>
+	<div ng-controller="myController">
+		<b><u>Single ng-repeat</u></b><br/>
+		<table>
+			<thead>
+				<tr>
+					<th>Firstname</th>
+					<th>Lastname</th>
+					<th>Gender</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="employee in employees">	
+					<td> {{employee.firstname}} </td>
+					<td> {{employee.lastname}} </td>
+					<td> {{employee.gender}} </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br/>
+	<b><u>ng-repeat within an ng-repeat</u></b>
+	<div ng-controller="mySecondController">
+		<ul>
+			<li ng-repeat="country in countries">
+				{{country.name}}
+					<ul>
+						<li ng-repeat="city in country.cities">
+							{{city.name}}
+						</li>
+					</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
