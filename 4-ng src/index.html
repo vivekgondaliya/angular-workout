@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+	<title>ng-src</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="my-script.js"></script>
+</head>
+<body>
+	<div ng-controller="myController">
+		<div>
+			Name: {{country.name}}
+		</div>
+		<div>
+			Capital: {{country.capital}}
+		</div>
+		<div>
+			<img ng-src="{{country.source}}" 
+			alt="{{country.name + 'Image source'}}"
+			style="height:150px; width:300px;" />
+		</div>
+	</div>
+</body>
+</html>
